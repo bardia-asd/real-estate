@@ -175,6 +175,9 @@ importers:
 
   .:
     dependencies:
+      '@radix-ui/react-direction':
+        specifier: ^1.2.0
+        version: 1.2.0(@types/react@19.3.0)(react@19.3.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1

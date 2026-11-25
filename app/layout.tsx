@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { RTLProvider } from "@/providers/direction-provider";
 
 const vazirmatn = localFont({
     src: "./fonts/Vazirmatn[wght].woff2",
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             className={`${vazirmatn.variable} h-full antialiased`}>
             <body className="min-h-full flex flex-col">
                 <Header />
-                {children}
+                <RTLProvider>{children}</RTLProvider>
                 <Footer />
             </body>
         </html>

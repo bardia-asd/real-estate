@@ -10,8 +10,8 @@ export type FooterLinkGroup = {
 
 export const NAV_LINKS: NavLink[] = [
     { title: "خانه", href: "/" },
-    { title: "خرید ملک", href: "/properties?type=sale" },
-    { title: "اجاره ملک", href: "/properties?type=rent" },
+    { title: "خرید ملک", href: "/properties?listing=sale" },
+    { title: "اجاره ملک", href: "/properties?listing=rent" },
     { title: "مشاورین املاک", href: "/agents" },
 ];
 
@@ -24,12 +24,7 @@ export const MOBILE_NAV_LINKS: NavLink[] = [
 export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
     {
         title: "کاوش",
-        links: [
-            { title: "خرید ملک", href: "/properties?type=sale" },
-            { title: "اجاره ملک", href: "/properties?type=rent" },
-            { title: "مشاورین املاک", href: "/agents" },
-            { title: "ثبت آگهی ملک", href: "/sell" },
-        ],
+        links: [...NAV_LINKS],
     },
     {
         title: "ابزارها",
