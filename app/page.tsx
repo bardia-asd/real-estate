@@ -1,11 +1,5 @@
-import { Input } from "@/components/ui/input";
-
 const Page = () => {
-    return (
-        <div className="max-w-sm p-5">
-            <Input />
-        </div>
-    );
+    return <main className="min-h-screen flex flex-col">Page</main>;
 };
 
 export default Page;
