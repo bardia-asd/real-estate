@@ -16,7 +16,11 @@ const FeaturedProperties = async () => {
                     title="جدیدترین ملک‌های منتخب"
                     description="مجموعه‌ای از بهترین ملک‌ها که توسط تیم ما انتخاب شده‌اند."
                     action={
-                        <Button asChild size="lg" variant="outline">
+                        <Button
+                            asChild
+                            size="lg"
+                            variant="outline"
+                            className="rounded-full px-5">
                             <Link href="/properties">
                                 مشاهده همه
                                 <ArrowLeft

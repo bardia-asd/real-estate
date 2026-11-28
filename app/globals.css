@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
     /* Base */
     --background: oklch(0.985 0.006 90);
@@ -160,9 +162,21 @@ body {
     * {
         @apply border-border outline-ring/50;
     }
-    
+
     button:not(:disabled),
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+}
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }

@@ -29,7 +29,7 @@ export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
     {
         title: "ابزارها",
         links: [
-            { title: "محاسبه‌گر وام مسکن", href: "/tools/mortgage-calculator" },
+            { title: "محاسبه‌گر وام مسکن", href: "/mortgage-calculator" },
             { title: "مقایسه املاک", href: "/compare" },
             { title: "علاقه‌مندی‌ها", href: "/favorites" },
         ],
