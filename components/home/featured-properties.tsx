@@ -4,14 +4,16 @@ import SectionHeader from "./section-header";
 import { Button } from "../ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Shell from "../ui/shell";
 
 const FeaturedProperties = async () => {
     const properties = await getFeaturedProperties();
 
     return (
         <section className="py-14 lg:py-28" aria-labelledby="featured-heading">
-            <div className="container mx-auto px-4">
+            <Shell>
                 <SectionHeader
+                    id="featured-heading"
                     eyebrow="املاک ویژه"
                     title="جدیدترین ملک‌های منتخب"
                     description="مجموعه‌ای از بهترین ملک‌ها که توسط تیم ما انتخاب شده‌اند."
@@ -31,12 +33,12 @@ const FeaturedProperties = async () => {
                         </Button>
                     }
                 />
-                <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+                <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
                     {properties.map((property) => (
                         <PropertyCard key={property.id} property={property} />
                     ))}
                 </div>
-            </div>
+            </Shell>
         </section>
     );
 };

@@ -5,11 +5,12 @@ import NavLinks from "./nav-links";
 import MobileMenu from "./mobile-menu";
 import { Button } from "../ui/button";
 import { Heart, Plus, Scale, SquareArrowRightEnter } from "lucide-react";
+import Shell from "../ui/shell";
 
 const Header = () => {
     return (
         <header className="sticky top-0 z-50 h-18 border-b bg-background backdrop-blur-xl">
-            <div className="container mx-auto flex h-full items-center justify-between px-4">
+            <Shell className="flex h-full items-center justify-between">
                 <Link href="/" aria-label="کاشانه، صفحه اصلی">
                     {/* Mobile logo */}
                     <Image
@@ -78,7 +79,7 @@ const Header = () => {
                     {/* Mobile navigation toggle */}
                     <MobileMenu />
                 </div>
-            </div>
+            </Shell>
         </header>
     );
 };

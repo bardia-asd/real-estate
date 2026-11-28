@@ -9,6 +9,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { FOOTER_LINK_GROUPS } from "@/constants/navigation";
+import Shell from "../ui/shell";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ const Footer = () => {
         <footer
             aria-label="پاورقی وب‌سایت"
             className="bg-primary text-primary-foreground">
-            <div className="container mx-auto px-4 py-16 lg:py-20">
+            <Shell className="py-16 lg:py-20">
                 {/* Main footer content */}
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_0.9fr_0.8fr_1fr_1.4fr] lg:gap-8">
                     {/* Brand information and social links */}
@@ -211,7 +212,7 @@ const Footer = () => {
                         </nav>
                     </div>
                 </div>
-            </div>
+            </Shell>
         </footer>
     );
 };

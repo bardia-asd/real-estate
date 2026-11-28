@@ -1,9 +1,10 @@
 import Image from "next/image";
-import PropertySearchForm from "./property-search-form";
+import PropertySearchForm from "../property/property-search-form";
+import Shell from "../ui/shell";
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[650px]">
+        <section className="relative min-h-162">
             {/* Background hero image */}
             <div className="absolute inset-0">
                 <Image
@@ -17,7 +18,7 @@ const Hero = () => {
             </div>
 
             {/* Main hero content */}
-            <div className="relative z-10 container mx-auto flex flex-col justify-center gap-10 px-4 py-14 lg:py-24">
+            <Shell className="relative z-10 flex flex-col justify-center gap-10 py-14 lg:py-24">
                 {/* Hero heading and description */}
                 <div className="max-w-3xl text-white">
                     <span className="mb-4 block text-sm font-medium">
@@ -39,7 +40,7 @@ const Hero = () => {
 
                 {/* Property search form */}
                 <PropertySearchForm />
-            </div>
+            </Shell>
 
             {/* Gradient overlay for text readability */}
             <div className="absolute inset-0 bg-linear-to-l from-primary/90 via-primary/50 to-transparent" />

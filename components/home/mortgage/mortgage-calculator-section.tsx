@@ -3,14 +3,16 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import SectionHeader from "../section-header";
 import MortgageCalculatorMini from "./mortgage-calculator-mini";
+import Shell from "@/components/ui/shell";
 
 export function MortgageCalculatorSection() {
     return (
         <section
             aria-labelledby="mortgage-heading"
             className="border-y bg-secondary/40 py-14 lg:py-24">
-            <div className="container mx-auto px-4 grid items-center gap-10 grid-cols-1 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+            <Shell className="grid items-center gap-10 grid-cols-1 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
                 <SectionHeader
+                    id="mortgage-heading"
                     eyebrow="ابزار محاسبه"
                     title="محاسبه اقساط وام مسکن"
                     description="مبلغ وام، نرخ سود و مدت بازپرداخت را وارد کنید."
@@ -39,7 +41,7 @@ export function MortgageCalculatorSection() {
                     className="sm:flex-col sm:items-start"
                 />
                 <MortgageCalculatorMini />
-            </div>
+            </Shell>
         </section>
     );
 }

@@ -41,7 +41,7 @@ const PropertySearchForm = () => {
         // Add optional filters only when the user has selected a value
         if (location) params.set("location", location);
         if (propertyType && propertyType !== "any")
-            params.set("type", propertyType);
+            params.set("types", propertyType);
 
         // Convert the selected price range into minimum and maximum price parameters
         if (priceRange && priceRange !== "any") {
